@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Bot runtime
+.env
+.env.*
+!.env.example
+data/
+logs/
+*.db
+*.db-shm
+*.db-wal
+*.lock
+backups/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp

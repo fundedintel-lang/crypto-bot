@@ -1,0 +1,8 @@
+# The production bot intentionally has ZERO third-party runtime dependencies.
+# It uses only the Python 3.11+ standard library (urllib, sqlite3, decimal, etc.).
+#
+# Optional developer tools:
+# pytest>=8.0
+# pytest-cov>=5.0
+# ruff>=0.6
+# mypy>=1.10
