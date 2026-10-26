@@ -1,0 +1,25 @@
+[Unit]
+Description=BTC Options Strategy Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=bot
+Group=bot
+WorkingDirectory=/opt/btc-options-bot
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/opt/btc-options-bot/.env
+ExecStart=/opt/btc-options-bot/.venv/bin/btc-options-bot run
+Restart=always
+RestartSec=10
+TimeoutStopSec=60
+KillSignal=SIGTERM
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/btc-options-bot/data /opt/btc-options-bot/logs
+
+[Install]
+WantedBy=multi-user.target
